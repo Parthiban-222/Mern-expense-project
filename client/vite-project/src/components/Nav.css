@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  
+  .navbar-left .logo {
+    height: 50px;
+  }
+  
+  .navbar-center {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-icon {
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  .navbar-right h4 {
+    margin: 0;
+    cursor: pointer;
+  }
