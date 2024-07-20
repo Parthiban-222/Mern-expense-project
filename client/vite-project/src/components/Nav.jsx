@@ -1,12 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import homeIcon from "../assets/navImg/home.jpg";
 import contactIcon from "../assets/navImg/contact.jpg";
 import aboutIcon from "../assets/navImg/about.jpg";
+import loginIcon from "../assets/navImg/login.jpg";
 import logo from "../assets/navImg/logo.jpg";
 import "./Nav.css";
 
 const Nav = () => {
+  const navigate = useNavigate(); // Hook to programmatically navigate
+
+  const handleLoginClick = () => {
+    navigate("/login"); // Navigate to the login page
+  };
+
   return (
     <div className="navbar">
       <div className="navbar-left">
@@ -23,9 +30,10 @@ const Nav = () => {
           <img src={contactIcon} className="navbar-icon" alt="Contact" />
         </Link>
       </div>
-      <div className="navbar-right">
-        <h4>Login</h4>
-      </div>
+      <Link to="/login">
+          <img src={loginIcon} className="navbar-icon" alt="Login" />
+        </Link>
+      
     </div>
   );
 };

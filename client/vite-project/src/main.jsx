@@ -7,7 +7,8 @@ const App = lazy(() => import("./App.jsx"));
 const HomePage = lazy(() => import("./components/pages/Home.jsx"));
 const AboutUs = lazy(() => import("./components/pages/About.jsx"));
 const Contact = lazy(() => import("./components/pages/Contact.jsx"));
-
+const Login =lazy(()=> import("./components/pages/Login.jsx"));
+const SignIn =lazy(()=> import("./components/pages/SignIn.jsx"));
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -42,8 +43,24 @@ const routes = createBrowserRouter([
         ),
       },
       {
+        path: "/login",
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Login />
+          </Suspense>
+        ),
+      },
+      {
+      path: "/signin",
+      element: (
+        <Suspense fallback={<div>Loading...</div>}>
+          <SignIn />
+        </Suspense>
+      ),
+    },
+      {
         path: "*",
-        element: <p>Page not Found</p>,
+        element: <p>Page not </p>,
       },
     ],
   },
