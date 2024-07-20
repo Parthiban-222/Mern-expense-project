@@ -14,12 +14,9 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
-<<<<<<< HEAD
     "react-toastify": "^10.0.5",
+    "react-tooltip": "^5.27.1",
     "toast": "^0.5.4"
-=======
-    "react-tooltip": "^5.27.1"
->>>>>>> 141d74aeb32856a3d52911bc847a8817eaa54bcc
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
